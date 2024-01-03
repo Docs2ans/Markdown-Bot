@@ -14,8 +14,9 @@ def main():
     for root, dirs, files in os.walk("docs"):
         for file in files:
             print(file)
-            if file.endswith(".yaml"):
-                  os.remove(os.path.join(root, file))
+            #Execute the following 2 lines if you want to remove .yaml files if present
+            # if file.endswith(".yaml"):
+            #       os.remove(os.path.join(root, file))
             if file.endswith(".md"):
                             print(file)
                             loader = UnstructuredMarkdownLoader(os.path.join(root, file))
